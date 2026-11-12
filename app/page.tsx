@@ -1,6 +1,8 @@
+import QRCodeGenerator from "@/components/QRCodeGenerator";
+
 export default function Home() {
   //
-  const menuItems = [
+  const banglaItems = [
     {
       id: 1,
       name: "Kacci Biriyani",
@@ -63,7 +65,7 @@ export default function Home() {
         </p>
         <h2 className="mt-2 font-bold text-green-400">Bangla Kitchen</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
-          {menuItems.map((item) => (
+          {banglaItems.map((item) => (
             <div key={item.id} className="border p-4 my-4 rounded-lg shadow-md">
               <h2 className="text-xl font-semibold">{item.name}</h2>
               <p>{item.description}</p>
@@ -71,6 +73,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <QRCodeGenerator />
       </div>
     </section>
   );
